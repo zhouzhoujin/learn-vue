@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #dialog{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+        }
+
+        .header {
+            height: 30px;
+            background: #000000;
+            color: #Fff;
+            line-height: 30px;
+            padding: 0 10px;
+        }
+
+        .title {
+            float: left;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <button @click="isLogin=true" >登录</button>
+        <button @click="isRegist=true" >注册</button>
+        <com v-show="isLogin" @close="isLogin=false">
+            <span slot="title1">登录</span>
+            <form action="" slot="content1"  @submit.prevent>
+                <p>
+                    用户名：<input type="text">
+                </p>
+                <p>
+                    密码：<input type="password">
+                </p>
+                <button>登录</button>
+            </form>
+        </com>
+        <com v-show="isRegist" @close="isRegist=false">
+            <span slot="title1">注册</span>
+            <form action="" slot="content1" @submit.prevent>
+                <p>
+                    用户名：<input type="text">
+                </p>
+                <p>
+                    密码：<input type="password">
+                </p>
+                <p>
+                    邮箱：<input type="email">
+                </p>
+                <button>注册</button>
+            </form>
+        </com>
+    </div>
+    <template id="app1">
+        <div id="dialog">
+            <div class="box">
+                <div class="header">
+                    <div class="title">
+                        <slot name="title1"></slot>
+                    </div>
+                    <div class="close" @click="$emit('close')">
+                        [X]
+                    </div>
+                </div>
+                <div class="content">
+                    <slot name="content1"></slot>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                isLogin:false,
+                isRegist:false
+            },
+            components:{
+                com:{
+                    template:'#app1'
+                }
+
+            }
+        })
+
+    </script>
+</body>
+</html>

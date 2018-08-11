@@ -132,13 +132,20 @@
             },
             computed:{
                 total(){
-                    return this.productList.reduce((sum,elem)=>{
-                        if(elem.isRed){
-                            sum += parseInt(elem.price);
-                            console.log(sum)
+                    // return this.productList.reduce((sum,elem)=>{
+                    //     if(elem.isRed){
+                    //         sum += parseInt(elem.price);
+                    //         console.log(sum)
+                    //     }
+                    //     return sum;
+                    // },0)
+                    let sum =0;
+                    this.productList.forEach((elem)=>{
+                        if (elem.isRed) {
+                            sum +=parseInt(elem.price);
                         }
-                        return sum;
-                    },0)
+                    })
+                    return sum;
                 }
             }
         })
