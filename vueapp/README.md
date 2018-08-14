@@ -1,4 +1,4 @@
-# vuecli3-test
+# vueapp
 
 ## Project setup
 ```

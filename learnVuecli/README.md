@@ -1,4 +1,4 @@
-# learnVuecli
+# vuecli3-test
 
 ## Project setup
 ```
