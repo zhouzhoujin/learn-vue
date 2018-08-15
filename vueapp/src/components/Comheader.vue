@@ -1,6 +1,6 @@
 <template>
     <div class="header" :style="{background:selectTitle.color}">
-        <span class="header-home">
+        <span class="header-home" @click="$router.push('/')">
             首页
         </span>
         <p class="header-title">
@@ -10,8 +10,10 @@
 </template>
 <script>
 export default{
-    props:["selectTitle"]
+    props:["selectTitle"],
+   
 }
+
 
     
 </script>
@@ -24,6 +26,7 @@ export default{
     top: 0;
     left: 0;
     line-height: 1rem;
+    z-index: 999;
     &-home{
         margin-left: 0.2rem;
     }

@@ -1,15 +1,10 @@
 <template>
   <div id="app">
-  
      <Comheader :selectTitle="selectTitle"></Comheader>
     <router-view class="content" @switchTab="switchTab"/>
-    <Comfooter :footerBgColor='selectTitle.color' :menuList='menuList' @changeTitle="changeTitle"></Comfooter>
-  
-   
-
+    <Comfooter :footerBgColor='selectTitle.color' :menuList='menuList' ></Comfooter>
   </div>
 </template>
-
 <script>
 import Comheader from '@/components/Comheader.vue';
 import Comfooter from '@/components/Comfooter.vue';
@@ -21,10 +16,7 @@ export default{
   /*created: function () {
       this.$router.push('/movie')//创建app之前导向movie
   },*/
-  methods: {
-    changeTitle(menu){
-      this.selectTitle = menu;
-    },
+  methods: {   
     switchTab(menu){
       this.menuList.forEach(Element=>{
         if(Element.Ename == menu){
@@ -62,12 +54,7 @@ export default{
     }
   }
 }
-
 </script>
-
-
-
-
 <style lang="scss">
 .content{
   margin: 1rem 0;
