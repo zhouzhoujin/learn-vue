@@ -18,10 +18,12 @@ export default {
         }
     },
     created(){
+       
         let url = `https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/subject/${this.$route.params.movieId}`;
          axios.get(url).then(res=>{
              this.detail = res.data;
          });
+        
     }
 }
 </script>

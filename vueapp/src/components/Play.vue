@@ -22,8 +22,9 @@
             </div>
 
         </div>
-        <div class="lrc-list">
-            <ul lrc-list-lrc>
+        <div class="mask"  :style="{background:`url(`+albumImg+`) no-repeat center/cover`}"></div>
+        <div class="lrc-list" ref="lrcList">
+            <ul lrc-list-lrc >
                 <li :class=" lrcIndex==index?'selected': ''" v-for="(lrc,index) in lrcList" :key="index" >
                     {{lrc[1]}}
                 </li>
@@ -59,7 +60,7 @@ export default{
             toggleList:false,
             lrcList:[],
             lrcIndex:-1,
-            test:[0,1,2,3,4,5]
+            
 
         }
 
@@ -122,30 +123,43 @@ export default{
             this.musicSrc=nowMusic.src;
             axios.get(nowMusic.lrc).then(res=>{
             this.lrcList=[];
-            this.parseLrc(res.data)
+            this.parseLrc(res.data);
+            this.lrcIndex=-1;
+            console.log
             })
           
         }
     },
     mounted(){
-        let musicAudio = this.$refs.musicAudio;
+         let musicAudio = this.$refs.musicAudio;
         musicAudio.addEventListener('timeupdate',()=>{
             let currentTime = musicAudio.currentTime;
             //console.log(currentTime);
             this.lrcList.forEach((element,index) =>{
-               if(currentTime<=Math.ceil(element[0]) && currentTime>Math.floor(element[0]) && index<this.lrcList.length){
-                    this.lrcIndex = index;
-                   console.log(Math.ceil(element[0]))
-                   console.log(Math.floor(element[0]))
-                   console.log(this.lrcIndex)
-                   console.log(index)
-               }
-                
-            })
-        })
-    }
-}
+               if(currentTime<=(element[0]) && index<this.lrcList.length){
+                    this.lrcList.forEach((element,index) =>{
+                         if( currentTime>element[0] ){
+                            this.lrcIndex = index;
+                       
+                         }
+                    })
+                     this.$refs.lrcList.scrollTop = (this.lrcIndex-1) * 25;
+                          console.log(`当前歌词`+this.lrcIndex)
+                            console.log(`当前滚动高度`+this.$refs.lrcList.scrollTop)
 
+                  
+               
+               }    
+            
+        })
+    })
+
+    }
+       
+    
+
+
+}
     
 </script>
 <style lang="scss" scoped>
@@ -168,6 +182,7 @@ export default{
         width: 0;
         img{
             width: 100%;
+            border-radius: 50%;
         }
     }
     &-info{
@@ -185,6 +200,7 @@ export default{
     width: 100%;
     background-color: #2a2929;
     overflow-y: scroll;
+    z-index: 2;
 
     &-item{
     color: #dcdbdb;
@@ -201,8 +217,10 @@ export default{
     position: fixed;
     bottom: 1rem;
     width: 100%;
+    z-index: 3;
     & audio{
         width: 100%;
+
     }
 }
 .showToggleList{
@@ -227,6 +245,18 @@ export default{
 }
   
 }
+.mask{
+     text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    top: 3.3rem;
+    overflow-y: scroll;   
+    margin-top: 1rem;
+    padding-top: 1rem;
+    filter: blur(30px)
+}
 .lrc-list{
     text-align: center;
     position: fixed;
@@ -234,9 +264,15 @@ export default{
     right: 0;
     bottom: 2rem;
     top: 3.3rem;
-    overflow-y: scroll;
-    z-index: -1;
-    padding-top: 2rem;
+    overflow-y: scroll;   
+    margin-top: 1rem;
+    padding-top: 1rem;
+    z-index: 1;
+    &-lrc{
+        position: absolute;
+        z-index: 3;
+    }
+    
     .selected{
     color: #299557;
     font-size: 120%;
