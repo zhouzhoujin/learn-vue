@@ -40,7 +40,7 @@
         </transition>
         
            <div class="playMusic">
-               <audio :src="musicSrc" autoplay controls ref="musicAudio" @play="isPlay=true" @pause="isPlay=false"></audio>1
+               <audio :src="musicSrc" autoplay controls ref="musicAudio" @play="isPlay=true" @pause="isPlay=false"></audio>
            </div>
     </div>
 </template>
