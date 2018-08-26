@@ -34,7 +34,7 @@
             <ul class="music-list" v-show="toggleList">
                 <li :class="['music-list-item', nowIndex == index?'selected': '']" v-for="(music,index) in musicList " :key="index" @click="selected(index)">
                     <span class="music-list-item-title">{{music.title}}&nbsp;-&nbsp;</span>
-                    <span class="music-list-item-author">{{music.author}}</span>1
+                    <span class="music-list-item-author">{{music.author}}</span>
                 </li>
             </ul>
         </transition>
