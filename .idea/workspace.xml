@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e48668e-0b85-4e4a-a5b7-cf66184ac85c" name="Default" comment="" />
+    <list default="true" id="4e48668e-0b85-4e4a-a5b7-cf66184ac85c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,7 +19,7 @@
       <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learnVuecli/src/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
+            <state relative-caret-position="418">
               <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -38,7 +40,7 @@
       <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vueapp/src/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="190">
               <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -50,7 +52,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vueapp/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
+            <state relative-caret-position="19">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -62,8 +64,8 @@
       <file leaf-file-name="Play.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vueapp/src/components/Play.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="42" column="123" lean-forward="true" selection-start-line="42" selection-start-column="123" selection-end-line="42" selection-end-column="123" />
+            <state relative-caret-position="-133">
+              <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -128,7 +130,7 @@
     <handled-path value="$PROJECT_DIR$/learnVuecli/node_modules" />
     <handled-path value="$PROJECT_DIR$/vueapp/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -154,39 +156,6 @@
               <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
               <item name="learnVuecli" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vueapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vueapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vueapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vueapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vueapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,6 +213,7 @@
       <workItem from="1534339962282" duration="6364000" />
       <workItem from="1534426558910" duration="622000" />
       <workItem from="1534596458422" duration="2266000" />
+      <workItem from="1535290430852" duration="714000" />
     </task>
     <task id="LOCAL-00001" summary="learn">
       <created>1533779091330</created>
@@ -315,14 +285,28 @@
       <option name="project" value="LOCAL" />
       <updated>1534862194479</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="learnvuecli3">
+      <created>1535290488254</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535290488254</updated>
+    </task>
+    <task id="LOCAL-00012" summary="learnvuecli3">
+      <created>1535290499701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1535290499701</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33731000" />
+    <option name="totallyTimeSpent" value="34445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -355,6 +339,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="learnvuecli3" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/learnVuecli/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVuecli/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vueapp/src/components/Play.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="123" lean-forward="true" selection-start-line="42" selection-start-column="123" selection-end-line="42" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/learnVuecli/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -672,7 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learnVuecli/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
+        <state relative-caret-position="418">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -682,7 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vueapp/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="190">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -700,7 +707,7 @@
     <entry file="file://$PROJECT_DIR$/vueapp/src/components/CHeader.vue" />
     <entry file="file://$PROJECT_DIR$/vueapp/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="19">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -710,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vueapp/src/components/Play.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="42" column="123" lean-forward="true" selection-start-line="42" selection-start-column="123" selection-end-line="42" selection-end-column="123" />
+        <state relative-caret-position="-133">
+          <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
         </state>
       </provider>
     </entry>
