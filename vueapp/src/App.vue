@@ -38,16 +38,11 @@ export default{
               color:'#009688',
               Ename:'music',
               path:'/music'
-            },  {
-              name:'书籍',
-              color:'#795548',
-              Ename:'book',
-              path:'/book'
-            },  {
-              name:'图片',
-              color:'#3f51b5',
-              Ename:'photo',
-              path:'/photo'
+            },{
+                name:'测试',
+                color:'#009688',
+                Ename:'test',
+                path:'/test'
             },
             ],
             selectTitle:{}  

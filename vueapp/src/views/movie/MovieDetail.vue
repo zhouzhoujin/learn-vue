@@ -1,10 +1,12 @@
 <template>
-    <div>
-        <h1>电影详情页面</h1>
-        <h1>电影ID： {{$route.params.movieId}}</h1>
+    <div class="detil">
+        <p class="detile-name">电影详情页面</p>
 
-        <div>{{detail.title}}</div>
-        <div>{{detail.summary}}</div>
+
+        <div class="detile-title">电影名：{{detail.title}}</div>
+        <div class="detile-content"><p>内容简介：</p>
+            {{detail.summary}}
+        </div>
         
     </div>
 </template>
@@ -27,4 +29,18 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+    .detile{
+        &-name{
+            text-align: center;
+            font-size: 0.5rem;
+         }
+        &-title{
+            font-size: 0.4rem;
+            color: #729d91;
+
+        }
+
+    }
+</style>
 

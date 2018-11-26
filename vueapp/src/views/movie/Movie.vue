@@ -1,20 +1,22 @@
 <template>
-    <div>
+    <div >
         <ul>
             <li  class="movie" v-for="movie in movieList" :key="movie.id">
+
                 <div class="movie-img">
                     <img :src="movie.images.large" alt="">
                 </div>                
                 <div class="movie-info">
-                     <router-link :to="'/moviedetail/'+movie.id">
+                    <router-link :to="'/moviedetail/'+movie.id">
+
                     <div class="movie-info-title">{{movie.title}}</div>
-                    </router-link>
                     <div >观众评 <span class="movie-info-average">{{movie.rating.average}}</span></div>
                     <div class="movie-info-star">主演：
                         <span v-for="item in movie.casts" :key="item.id">{{item.name}}&nbsp;</span>
                     </div>
+                    </router-link>
                 </div>
-               
+
             </li>
         </ul>
         <div class="loading" v-show="isLoading">
@@ -44,22 +46,22 @@ export default {
                 this.getData();
             };
         };
-        
+
     },
 
     methods:{
         getData(){
             this.isLoading = true;
-             let url1 = 'https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters';
+            let url1 = 'https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters';
             let url2 = "https://api.myjson.com/bins/pb8vw";
             axios.get(url1).then(res=>{
-                 /* console.log(
-          res.data.subjects.slice(
-            this.movieList.length,
-            this.movieList.length + 5
-                )
-             );*/
-             console.log(res)
+                /* console.log(
+         res.data.subjects.slice(
+           this.movieList.length,
+           this.movieList.length + 5
+               )
+            );*/
+                console.log(res)
                 let getList = res.data.subjects.slice(
                     this.movieList.length,
                     this.movieList.length+5
@@ -68,11 +70,24 @@ export default {
                     this.isEnd = true;
                 };
                 this.movieList=this.movieList.concat(getList);
-                 this.isLoading = false;
+                this.isLoading = false;
             })
         }
-
     },
+        /*loadMore(){
+            clearTimeout(this.timer);
+            this.timer = setTimeout (()=>{
+                let scrollTop = document.documentElement.scrollTop;
+                let scrollHeight = document.documentElement.scrollHeight;
+                let clientHeight = document.documentElement.clientHeight;
+                console.log(scrollTop,scrollHeight,clientHeight);
+                if(scrollTop + clientHeight == scrollHeight && !this.isEnd){
+                    this.getData();
+                };
+            },13)
+        }*/
+
+
     data(){
         return{
             movieList:[],

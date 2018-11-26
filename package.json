@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zhouzhoujin/learn-vue/issues"
   },
-  "homepage": "https://github.com/zhouzhoujin/learn-vue#readme"
+  "homepage": "https://github.com/zhouzhoujin/learn-vue#readme",
+  "dependencies": {
+    "better-scroll": "^1.13.2"
+  }
 }
