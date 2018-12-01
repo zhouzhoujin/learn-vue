@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Movie from '@/views/movie/Movie.vue';
 import Music from '@/views/music/Music.vue';
 import MovieDetail from '@/views/movie/MovieDetail.vue';
-import Test from '@/views/test/test.vue'
+import Test from '@/views/test/test.vue';
 
 
 

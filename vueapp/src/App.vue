@@ -20,9 +20,11 @@ export default{
     switchTab(menu){
       this.menuList.forEach(Element=>{
         if(Element.Ename == menu){
-          this.selectTitle=Element;
+          this.selectTitle=Element
         }
       })
+        console.log(menu);
+        console.log(this.selectTitle);
     }
   },
   data(){
@@ -35,12 +37,12 @@ export default{
               path:'/movie'
             },  {
               name:'音乐',
-              color:'#009688',
+              color:'#879608',
               Ename:'music',
               path:'/music'
             },{
                 name:'测试',
-                color:'#009688',
+                color:'#8d3e96',
                 Ename:'test',
                 path:'/test'
             },
