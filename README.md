@@ -1,5 +1,5 @@
 # learn-vue
-用所学的vue经过vuecli制作的一个移动端app
+用所学的vue经过vuecli制作的一个移动端vue项目
 
 # vueapp
 
